@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: poppins !important;
+  overflow-x:hidden;
+}
+
+.slick-dots li button:before {
+  color: white !important; /* Ensures the color change */
+  opacity: 1 !important; /* Make sure it's fully visible */
+  font-size: 5px !important; /* Default size for dots */
+
+}
+
+/* Active dot styling */
+.slick-dots li.slick-active button:before {
+  color: #ff297f !important; /* Set active dot color */
+  opacity: 1 !important;
+  transform: scale(2); /* Double the size of the active dot */
+}
+
+.custome-leading {
+  line-height: 2 !important;
+}
+.btn-hover:hover {
+  background-color: #1c0d5c !important;
+} /* Light Mode */
+
+body.light {
+  background-color: #f4f5ff;
+  
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #190f21;
+}
+
+/* Additional dark mode styles */
+/* .dark a {
+  color: white;
+} */
+/* .dark .bg-gradient-to-l {
+    background: linear-gradient(to left, #fb297f, #4b8fff);
+  } */
+/* Light mode dots */
+body.light .slick-dots li button:before {
+  color: #cecece !important;
+}
+
+/* Dark mode dots */
+body.dark .slick-dots li button:before {
+  color: white !important;
+}
+
+/* Active dot color for both themes */
+body.light .slick-dots li.slick-active button:before {
+  color: #ff297f !important; /* Light mode active dot */
+}
+
+body.dark .slick-dots li.slick-active button:before {
+  color: #ff297f !important; /* Dark mode active dot */
+}
