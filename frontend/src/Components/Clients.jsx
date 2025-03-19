@@ -172,10 +172,10 @@ const Clients = ({ theme }) => {
         {theme === "light" && (
           <img src={line} className="mt-[0rem] relative z-0" />
         )}
-        <img
+        {/* <img
           src={header_moon}
           className="absolute md:w-[8%] w-[15%] top-[-2rem] 2xl:left-[25rem] 2xl:top-[-4rem] md:left-[20rem] right-[5rem] md:top-[-2rem] lg:top-[-3rem] z-100"
-        />
+        /> */}
       </div>
     </div>
   );

@@ -189,10 +189,10 @@ const Contact = ({ theme }) => {
           src={line}
           className="mt-[0rem] md:mt-[2rem] lg:mt-0 relative 2xl:mb-[3rem] 3xl:mb-0 z-0"
         />
-        <img
+        {/* <img
           src={header_moon}
           className="absolute w-[10%] md:left-[25rem] left-[5rem] top-[-1rem] lg:top-[-4rem] md:top-[-2rem] z-10"
-        />
+        /> */}
       </div>
     </div>
   );

@@ -147,7 +147,7 @@ const Header = ({ toggletheme, theme }) => {
                 </Link>
                 {item.subItems && (
                   <ul
-                    className={`absolute left-0  w-[250px] p-2 bg-white text-black rounded-md shadow-lg ${
+                    className={`absolute left-0  w-[250px] p-2 mt-[1rem] bg-white text-black rounded-md shadow-lg ${
                       (item.name === "Services" && servicesDropdown) ||
                       (item.name === "Industries" && industriesDropdown)
                         ? "block"

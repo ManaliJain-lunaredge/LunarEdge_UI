@@ -1,16 +1,13 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Outlet } from "react-router-dom";
 
-const Layout = ({ toggletheme, theme }) => {
+const Layout = ({ children, toggletheme, theme }) => {
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Header toggletheme={toggletheme} theme={theme} />
-      <main>
-        <Outlet /> {/* This will render the current page's content */}
-      </main>
-      <Footer theme={theme} />
+      <main>{children}</main>
+      <Footer  toggletheme={toggletheme} theme={theme} />
     </div>
   );
 };

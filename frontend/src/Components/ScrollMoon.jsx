@@ -1,57 +1,64 @@
 import { useState, useEffect } from "react";
 import header_moon from "../assets/Home/header_moon.png";
 
-const moonPositions = [
-  { scrollY: 300, x: "70%", y: "100%",width:"10%" },
-  { scrollY: 1200, x: "30%",y:"70%",width:"15%" },
-  { scrollY: 2059, x: "75%",width:"40%"  },
-  { scrollY: 2996, x: "35%", y: "60%",width:"15%" },
-  { scrollY: 4771, x: "90%", y: "60%",width:"10%" },
-  { scrollY: 5408, x: "30%", y: "70%" ,width:"15%"},
-  { scrollY: 6699, x: "90%", y: "50%" ,width:"10%"},
-  { scrollY: 7744, x: "30%", y: "50%" ,width:"15%"},
-  { scrollY: 8544, x: "90%", y: "50%" ,width:"10%"},
-  { scrollY: 9744, x: "30%", y: "50%" ,width:"12%"},
-  { scrollY: 11744, x: "90%", y: "50%" ,width:"10%"},
-  { scrollY: 12744, x: "30%", y: "50%" ,width:"15%"},
-];
+// Generate moon positions dynamically
+const moonPositions = Array.from({ length: 13 }, (_, i) => ({
+  scrollY: i * 1000, // Dynamic spacing (adjust as needed)
+  x: i === 5 ? "67%" : i===8 ? "35%":i===9 ? "26%":i===10 ? "30%":i===11 ? "78%":i===12 ? "30%" :i===13 ? "30%": i % 2 === 0 ? "70%" :i % 6 === 0 ? "40%" :"30%", // Set 65% when i == 6
+  y: i===1?"90%" :i === 4 ? "100%" : i === 5 ? "38%":i === 5 ? "38%":i === 10 ? "29%" :i === 11 ? "78%" :i === 12 ? "31%" :`${100 - i * 10}%` ,
+  width:
+  i === 2 // 🌙 Increase size at `i == 2`
+    ? "40%" // Big size at this point
+    : i === 7 // 🌙 Set width to 60% at `i == 6`
+    ? "7%"
+     : i === 11 // 🌙 Set width to 60% at `i == 6`
+    ? "10%"
+     : i === 10  ||i===12// 🌙 Set width to 60% at `i == 6`
+    ? "7%"
+    : i > 2 // 🌙 Decrease size after `i == 2`
+    ? `${10 + ((i % 4) * 5) / 3}%` // Smaller size after `i == 2`
+    : `${10 + (i % 4) * 5}%`, // Default width variation
+  rotation: i * 45, // Smooth rotation increments
+}));
+
 
 const ScrollMoon = () => {
   const [position, setPosition] = useState(moonPositions[0]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      console.log(scrollY);
+  const handleScroll = () => {
+  const scrollY = window.scrollY;
 
-      // Find the closest position based on scroll
-      const closest = moonPositions.reduce((prev, curr) =>
-        Math.abs(curr.scrollY - scrollY) < Math.abs(prev.scrollY - scrollY)
-          ? curr
-          : prev
-      );
+  // Find the closest moon position
+  const closest = moonPositions.reduce((prev, curr) =>
+    Math.abs(curr.scrollY - scrollY) < Math.abs(prev.scrollY - scrollY) ? curr : prev
+  );
 
-      setPosition(closest);
-    };
+  setPosition(prev => ({
+    ...closest,
+    rotation: prev.rotation + 2, // Increment rotation smoothly
+  }));
+};
+
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div style={{ height: "100%", background: "#0b0514", position: "relative" ,}}>
+    <div style={{ height: "100%", background: "#0b0514", position: "relative" }}>
       <img
         src={header_moon}
         alt="Moving Moon"
         style={{
           position: "fixed",
-          top: position.y,
+          top: position.y, // Dynamically adjust `top` value
           left: position.x,
-          transform: "translate(-50%, -50%)",
-          width: position.width, // Dynamically changing width,
-          // height: "80px",
-          zIndex: 1000, // Ensures it stays above all elements
-          transition: "top 0.5s ease-out, left 0.5s ease-out",
+          transform: `translate(-50%, -50%) rotate(${position.rotation}deg)`,
+          width: position.width, // Dynamically adjust width
+          zIndex: 1000,
+          transition:
+            "top 0.5s ease-out, left 0.5s ease-out, transform 0.5s ease-out, width 0.5s ease-out",
         }}
       />
     </div>

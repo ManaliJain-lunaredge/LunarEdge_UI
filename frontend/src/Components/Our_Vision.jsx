@@ -113,10 +113,10 @@ const Our_Vision = ({ theme }) => {
       {/* moon view */}
       <div className="relative">
         <img src={line} className="md:mt-[8rem] mt-[3rem] relative z-0" />
-        <img
+        {/* <img
           src={header_moon}
           className="absolute 3xl:w-[8%] w-[15%] md:w-[15%] 2xl:w-[10%] right-[5rem]  md:top-[-5rem] top-[-2rem] z-10"
-        />
+        /> */}
       </div>
     </div>
   );

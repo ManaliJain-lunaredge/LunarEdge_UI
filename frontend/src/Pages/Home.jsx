@@ -20,7 +20,7 @@ import Blogs from "../Components/Blogs";
 import Contact from "../Components/Contact";
 import Footer from "./Footer";
 import MobileHero from "./MobileHero";
-
+import ScrollMoon from "../Components/ScrollMoon";
 
 const Home = ({ toggletheme, theme }) => {
   return (
@@ -30,7 +30,7 @@ const Home = ({ toggletheme, theme }) => {
           <Header toggletheme={toggletheme} theme={theme} />
           <Hero />
         </div> */}
-        <MobileHero toggletheme={toggletheme} theme={theme}/>
+        <MobileHero toggletheme={toggletheme} theme={theme} />
       </div>
       <div
         className="hidden md:block bg-cover bg-center bg-[#190F21] bg-no-repeat relative  min-h-[145vh] md:min-h-[60vh] lg:min-h-[65vh] xl:min-h-[75vh] 2xl:min-h-[80vh] 3xl:min-h-screen   "
@@ -38,15 +38,16 @@ const Home = ({ toggletheme, theme }) => {
       >
         <Header toggletheme={toggletheme} theme={theme} />
         <Hero theme={theme} />
-        <img
+        {/* <img
           src={header_moon}
           className="hidden md:block absolute xl:right-[30rem] lg:bottom-[-2rem] xl:bottom-[-5rem] xl:w-[10%] md:bottom-[-2rem] md:w-[10%] lg:right-[15rem] md:right-[7rem]"
-        />
+        /> */}
+        <ScrollMoon />
       </div>
       <div toggletheme={toggletheme} theme={theme}>
-       <div className="hidden md:block">
-       <Values theme={theme} />
-       </div>
+        <div className="hidden md:block">
+          <Values theme={theme} />
+        </div>
         <Aboutus theme={theme} />
         <Discover theme={theme} />
         <Journey theme={theme} />
@@ -60,9 +61,9 @@ const Home = ({ toggletheme, theme }) => {
         <Blogs theme={theme} />
         <Contact theme={theme} />
       </div>
-      <div toggletheme={toggletheme} theme={theme}>
+      {/* <div toggletheme={toggletheme} theme={theme}>
         <Footer theme={theme} />
-      </div>
+      </div> */}
     </div>
   );
 };

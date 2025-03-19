@@ -38,10 +38,10 @@ const Process = ({ theme }) => {
           >
             <div className=" 2xl:pl-[4rem]  relative">
               <img src={process} alt="process" className=" w-full z-0" />
-              <img
+              {/* <img
                 src={header_moon}
                 className="absolute 2xl:right-[-4rem] md:right-[-2rem] lg:top-[-3rem] md:top-[-1rem] 3xl:w-[30%] lg:w-[35%] md:w-[40%] z-100"
-              />
+              /> */}
             </div>
           </div>
           <div
@@ -63,9 +63,12 @@ const Process = ({ theme }) => {
             </h3>
 
             <div>
-              <ul className=" xl:pr-0 2xl:pb-[4rem] p-[1rem]  " data-aos="fade-down"
-          data-aos-duration="500"
-          data-aos-delay="400">
+              <ul
+                className=" xl:pr-0 2xl:pb-[4rem] p-[1rem]  "
+                data-aos="fade-down"
+                data-aos-duration="500"
+                data-aos-delay="400"
+              >
                 {list.map((item, i) => (
                   <li className="flex gap-[2rem] mb-[2rem] " key={item.id}>
                     <p
@@ -104,9 +107,14 @@ const Process = ({ theme }) => {
         {/* mobile view */}
         <div className="px-[2rem] pt-[4rem] md:hidden ">
           <div className="">
-            <h4 className={`${
+            <h4
+              className={`${
                 theme === "dark" ? " text-white" : "text-[#0444AC]"
-              } font-semibold text-xl  pb-[2rem]`}> Our Process</h4>
+              } font-semibold text-xl  pb-[2rem]`}
+            >
+              {" "}
+              Our Process
+            </h4>
             <h3 className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] font-poppins text-transparent  bg-clip-text inline-block font-semibold text-3xl leading-tight mt-0 pb-[2rem]">
               How We Bring Your
               <br /> Vision to Life

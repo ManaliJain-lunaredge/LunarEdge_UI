@@ -18,22 +18,17 @@ import Projects from "./Components/Projects";
 import Awards from "./Components/Awards";
 import Contact from "./Components/Contact";
 import Careers from "./Components/Careers";
+import Layout from "./Pages/Layout";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css"; 
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
-  useEffect(() => {
-    AOS.init({
-      duration: 1200, // Animation duration
-      offset: 200,    // Distance before animation triggers
-      once: false,    // Allows animation to trigger again when scrolling back up
-    });
-  
-    return () => AOS.refresh(); // Refresh AOS animations on component unmount
-  }, []);
-  
 
+  useEffect(() => {
+    AOS.init({ duration: 1200, offset: 200, once: false });
+    return () => AOS.refresh();
+  }, []);
 
   useEffect(() => {
     document.body.className = theme;
@@ -43,13 +38,13 @@ function App() {
   const toggletheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
-  
+
   return (
-    <div className={`App ${theme}`}>
-      <Router>
+    <Router>
+      <Layout toggletheme={toggletheme} theme={theme}>
         <Routes>
-          <Route path="/" element={<Home toggletheme={toggletheme} theme={theme} />} />
-          <Route path="/aboutus" element={<Aboutus theme={theme}/>} />
+          <Route path="/" element={<Home theme={theme} toggletheme={toggletheme} />} />
+          <Route path="/aboutus" element={<Aboutus theme={theme} />} />
           <Route path="/webdevelopment" element={<WebDevelopment />} />
           <Route path="/appdevelopment" element={<AppDevelopment />} />
           <Route path="/seoservices" element={<SeoServices />} />
@@ -65,10 +60,10 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<Contact theme={theme}/>} />
+          <Route path="/contact" element={<Contact theme={theme} />} />
         </Routes>
-      </Router>
-    </div>
+      </Layout>
+    </Router>
   );
 }
 

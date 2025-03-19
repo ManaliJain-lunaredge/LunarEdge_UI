@@ -157,10 +157,10 @@ const Blogs = ({ theme }) => {
       </div>
       <div className="relative">
         <img src={line} className="mt-[0rem] 2xl:mb-[3rem] relative z-0" />
-        <img
+        {/* <img
           src={header_moon}
           className="absolute md:w-[8%] w-[15%] top-[-2rem] right-[10rem] md:top-[-2rem] 2xl:top-[-4rem] lg:top-[-3rem] z-10"
-        />
+        /> */}
       </div>
     </div>
   );

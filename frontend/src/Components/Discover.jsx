@@ -100,13 +100,13 @@ const Discover = ({ theme }) => {
             </li>
           </ul>
         </div>
-        <div
+        {/* <div
           className="col-span-2"
           data-aos="fade-left"
           data-aos-duration="500"
           data-aos-delay="600">
           <img src={moon_image} alt="moon" className="md:w-[90%]  " />
-        </div>
+        </div> */}
       </div>
       <img src={line} className="mt-[0rem] relative z-0" />
 

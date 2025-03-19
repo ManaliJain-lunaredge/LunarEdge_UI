@@ -143,7 +143,7 @@ const Technology = ({ theme }) => {
                   <div className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] 3xl:w-[398px] 2xl:w-[300px]  lg:w-[100%] md:w-[95% ] w-[95%] text-center p-[1rem] text-white xl:text-4xl 2xl:text-2xl 3xl:text-4xl lg:text-2xl font-medium font-poppins rounded-t-md">
                     {item.name}
                   </div>
-                  <div className="bg-white bg-opacity-80 p-[1rem] rounded-b-md text-base sm:text-base 3xl:w-[398px] 2xl:w-[300px] lg:w-[100%] 2xl:h-[330px] md:h-[350px] h-[300px] sm:w-[95%]  w-[95%] 3xl:text-2xl flex justify-center items-center">
+                  <div className="bg-white bg-opacity-80 p-[1rem] rounded-b-md text-base sm:text-base 3xl:w-[398px] 2xl:w-[300px] lg:w-[100%] 3xl:h-[330px] lg:h-[240px] md:h-[350px] h-[300px] sm:w-[95%]  w-[95%] 3xl:text-2xl flex justify-center items-center">
                     {item.description}
                   </div>
                 </div>

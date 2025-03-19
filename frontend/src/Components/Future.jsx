@@ -157,10 +157,10 @@ const Future = ({ theme }) => {
           src={line}
           className="mt-[5rem] lg:mt-[3rem] 2xl:mt-[5rem] md:mb-[3rem] lg:mb-0 relative z-0"
         />
-        <img
+        {/* <img
           src={header_moon}
           className="absolute lg:w-[14%] w-[25%] 2xl:left-[25rem] md:w-[15%] lg:top-[-6rem] lg:left-[5rem] md:top-[-3rem] md:left-[5rem] left-[2rem] top-[-3rem] 3xl:top-[-8rem] 2xl:top-[-6rem]  z-10"
-        />
+        /> */}
       </div>
     </div>
   );

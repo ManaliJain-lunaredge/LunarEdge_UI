@@ -41,10 +41,10 @@ const Aboutus = ({ theme }) => {
             alt="about"
             className="w-full max-w-[500px] object-cover"
           />
-          <img
+          {/* <img
             src={header_moon}
             className="absolute right-[-2rem] bottom-[-1%]  xl:bottom-[32%] 3xl:bottom-[-1%]  md:w-[40%] 2xl:bottom-[75%] 2xl:right-[-8%] xl:right-[-13%] 3xl:right-[3%] lg:right-[-8%] lg:bottom-[20%] md:bottom-[50%] sm:bottom-[45%] md:right-[-1rem] sm:right-[-1rem] w-[30%]"
-          />
+          /> */}
         </div>
         <div className="col-span-3 w-[90%]"  data-aos="fade-down-left"
           data-aos-duration="500"

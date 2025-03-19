@@ -39,10 +39,10 @@ const Journey = ({ theme }) => {
               data-aos-delay="300"
             >
               <img src={journey} alt="about" className=" w-full z-0 " />
-              <img
+              {/* <img
                 src={header_moon}
                 className="absolute right-[-2rem] bottom-[-1%] 2xl:bottom-[63%] xl:bottom-[32%] 3xl:bottom-[-7%]  md:w-[40%] lg:bottom-[65%] 2xl:right-[-8%] xl:right-[-13%] 3xl:right-[-7%] lg:right-[-8%]  md:bottom-[72%] sm:bottom-[45%] md:right-[-1rem] sm:right-[-1rem] w-[30%]"
-              />
+              /> */}
             </div>
           </div>
           <div
