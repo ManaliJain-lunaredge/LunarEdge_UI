@@ -35,9 +35,9 @@ const Discover = ({ theme }) => {
               <p
                 className={`${
                   theme === "dark" ? " text-white" : "text-black"
-                } text-2xl  2xl:text-xl 3xl:text-2xl xl:text-xl md:text-base sm:text-sm  font-normal`}
+                } text-2xl  2xl:text-xl 3xl:text-2xl xl:text-xl md:text-base  content-line-spacing sm:text-sm  font-normal`}
               >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r mr-2 from-[#FF297F] to-[#4B8FFF]  font-semibold text-3xl 2xl:text-xl 3xl:text-3xl  xl:text-2xl md:text-base sm:text-base leading-relaxed">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r mr-2 from-[#FF297F] to-[#4B8FFF]  font-semibold text-3xl 2xl:text-xl 3xl:text-3xl  xl:text-2xl md:text-base sm:text-base ">
                   Precision in Digital Solutions: 
                 </span>
                 LunarEdge excels at creating seamless digital experiences that
@@ -53,7 +53,7 @@ const Discover = ({ theme }) => {
               <p
                 className={`${
                   theme === "dark" ? " text-white" : "text-black"
-                } text-2xl  2xl:text-xl 3xl:text-2xl xl:text-xl md:text-base sm:text-sm  font-normal`}
+                } text-2xl  2xl:text-xl 3xl:text-2xl content-line-spacing xl:text-xl md:text-base sm:text-sm  font-normal`}
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r mr-2 from-[#FF297F] to-[#4B8FFF]  font-semibold text-3xl 2xl:text-xl 3xl:text-3xl  xl:text-2xl md:text-base sm:text-base leading-relaxed">
                   Transformative IT Services:
@@ -71,7 +71,7 @@ const Discover = ({ theme }) => {
               <p
                 className={`${
                   theme === "dark" ? " text-white" : "text-black"
-                } text-2xl  2xl:text-xl 3xl:text-2xl xl:text-xl md:text-base sm:text-sm  font-normal`}
+                } text-2xl  2xl:text-xl 3xl:text-2xl content-line-spacing xl:text-xl md:text-base sm:text-sm  font-normal`}
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r mr-2 from-[#FF297F] to-[#4B8FFF]  font-semibold text-3xl 2xl:text-xl 3xl:text-3xl  xl:text-2xl md:text-base sm:text-base leading-relaxed">
                   Smooth Data Flow:  
@@ -89,7 +89,7 @@ const Discover = ({ theme }) => {
               <p
                 className={`${
                   theme === "dark" ? " text-white" : "text-black"
-                } text-2xl  2xl:text-xl 3xl:text-2xl xl:text-xl md:text-base sm:text-sm  font-normal`}
+                } text-2xl  2xl:text-xl 3xl:text-2xl content-line-spacing xl:text-xl md:text-base sm:text-sm  font-normal`}
               >
                 <span className="bg-clip-text text-transparent bg-gradient-to-r mr-2 from-[#FF297F] to-[#4B8FFF]  font-semibold text-3xl 2xl:text-xl 3xl:text-3xl  xl:text-2xl md:text-base sm:text-base leading-relaxed">
                   360° Business Acceleration:
@@ -100,13 +100,13 @@ const Discover = ({ theme }) => {
             </li>
           </ul>
         </div>
-        {/* <div
+        <div
           className="col-span-2"
           data-aos="fade-left"
           data-aos-duration="500"
           data-aos-delay="600">
           <img src={moon_image} alt="moon" className="md:w-[90%]  " />
-        </div> */}
+        </div>
       </div>
       <img src={line} className="mt-[0rem] relative z-0" />
 

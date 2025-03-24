@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Footer = ({ theme }) => {
   return (
     <div>
-      <div className="2xl:px-[8rem] p-[2rem] md:py-[5rem] mt-[2rem] md:mt-0">
+      <div className="2xl:px-[8rem] p-[2rem] md:pb-[5rem] mt-[2rem] md:mt-0">
         <div className="lg:flex justify-between">
           <div className="">
             <Link to="/">

@@ -72,12 +72,12 @@ const Mission = ({ theme }) => {
       </div>
       <div className="relative">
         <img src={line} className="md:mt-[5rem] mt-[0rem] relative z-0" />
-        {/* <img
+        <img
           src={header_moon}
           className="absolute md:w-[8%] w-[15%] top-[-2rem] md:right-[5rem] lg:top-[-3rem] md:top-[-2rem] 3xl:top-[-5rem] 2xl:top-[-3rem] right-[3rem] z-10"
           // left-[5rem] top-[-2rem]
           //2xl:w-[10%] left-[3rem] top-[-3rem] 3xl:top-[-6rem] 2xl:right-[10%] md:left-[5%] md:top-[-4rem] xl:top-[-7rem] lg:top-[-6rem] xl:w-[13%] 2xl:top-[-4rem] w-[20%] 3xl:right-[10rem]
-        /> */}
+        />
       </div>
     </div>
   );

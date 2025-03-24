@@ -142,13 +142,13 @@ const Clients = ({ theme }) => {
                       theme === "dark"
                         ? " bg-[#E8E8E8] dark:hover:bg-white dark:cursor-pointer"
                         : "bg-white hover:bg-[#e8e8e8] cursor-pointer"
-                    }  3xl:w-[500px] 2xl:w-[400px] 2xl:h-[500px] 3xl:h-[630px] w-[98%] xl:w-[90%] xl:h-[500px]  lg:h-[400px] h-[450px] rounded-lg flex flex-col justify-center`}
+                    }  3xl:w-[500px] 2xl:w-[400px] 2xl:h-[500px] 3xl:h-[600px] w-[98%] xl:w-[90%] xl:h-[500px]  lg:h-[400px] h-[450px] rounded-lg flex flex-col justify-center`}
                   >
                     <img
                       src={item.img}
                       className="3xl:w-[50%] md:w-[40%] w-[50%] mx-auto "
                     />
-                    <div className="flex justify-between 2xl:p-[2rem] p-[1rem] mt-[1rem]">
+                    <div className="flex justify-between 2xl:px-[2rem] p-[1rem] mt-[1rem]">
                       <div className="  text-[#4B8FFE] text-xl xl:text-xl lg:text-2xl md:text-xl 2xl:text-2xl sm:text-base  leading-relaxed font-semibold font-poppins ">
                         {item.name}
                       </div>
@@ -157,7 +157,7 @@ const Clients = ({ theme }) => {
                         <p className="font-bold">{item.rate}</p>
                       </div>
                     </div>
-                    <div className=" 2xl:p-[2rem] p-[1rem]   text-base  xl:text-2xl 2xl:text-xl 3xl:text-2xl lg:text-base md:text-base sm:text-sm ">
+                    <div className=" 2xl:px-[2rem] p-[1rem]   text-base  xl:text-2xl 2xl:text-xl 3xl:text-2xl lg:text-base md:text-base sm:text-sm ">
                       "{item.description}"
                     </div>{" "}
                   </div>
@@ -172,10 +172,10 @@ const Clients = ({ theme }) => {
         {theme === "light" && (
           <img src={line} className="mt-[0rem] relative z-0" />
         )}
-        {/* <img
+        <img
           src={header_moon}
           className="absolute md:w-[8%] w-[15%] top-[-2rem] 2xl:left-[25rem] 2xl:top-[-4rem] md:left-[20rem] right-[5rem] md:top-[-2rem] lg:top-[-3rem] z-100"
-        /> */}
+        />
       </div>
     </div>
   );

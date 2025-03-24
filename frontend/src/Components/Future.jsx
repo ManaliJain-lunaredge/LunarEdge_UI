@@ -29,7 +29,7 @@ const Future = ({ theme }) => {
   return (
     <div>
       {/* desktop view */}
-      <div className="md:grid grid-cols-5 3xl:gap-[10rem] 2xl:gap-[3rem]  py-[5rem] 2xl:px-[7rem] px-[3rem] hidden">
+      <div className="md:grid grid-cols-5 3xl:gap-[5rem] 2xl:gap-[3rem]  py-[5rem] 2xl:px-[7rem] px-[3rem] hidden">
         <div
           className="col-span-3"
           data-aos="zoom-in"
@@ -79,8 +79,8 @@ const Future = ({ theme }) => {
                 </li>
               ))}
             </ul>
-            <div className="bg-[#0444AC] text-white transition-all duration-300 rounded-md p-[1rem] flex 3xl:w-[32%] 2xl:w-[40%] xl:w-[40%] lg:w-[55%] md:w-[60%]  sm:w-[60%] hover:bg-[#FF297F] cursor-pointer">
-              <Link to="/careers" className="lg:text-lg xl:text-base 3xl:text-lg text-sm">
+            <div className="bg-[#0444AC] text-white transition-all duration-300 rounded-md p-[1.5rem] flex 3xl:w-[40%] justify-center items-center 2xl:w-[40%] xl:w-[40%] lg:w-[55%] md:w-[60%]  sm:w-[60%] hover:bg-[#FF297F] cursor-pointer">
+              <Link to="/careers" className="lg:text-lg xl:text-base 3xl:text-xl text-sm">
                 View Latest Job Openings{" "}
               </Link>
               <FaChevronRight className="2xl:text-sm text-xs mt-2 ml-2 " />
@@ -94,7 +94,7 @@ const Future = ({ theme }) => {
           data-aos-delay="200"
         >
           <div className=" ">
-            <img src={future} alt="future" className=" " />
+            <img src={future} alt="future" className="w-full max-w-[600px] object-cover " />
           </div>
         </div>
       </div>
@@ -157,10 +157,10 @@ const Future = ({ theme }) => {
           src={line}
           className="mt-[5rem] lg:mt-[3rem] 2xl:mt-[5rem] md:mb-[3rem] lg:mb-0 relative z-0"
         />
-        {/* <img
+        <img
           src={header_moon}
           className="absolute lg:w-[14%] w-[25%] 2xl:left-[25rem] md:w-[15%] lg:top-[-6rem] lg:left-[5rem] md:top-[-3rem] md:left-[5rem] left-[2rem] top-[-3rem] 3xl:top-[-8rem] 2xl:top-[-6rem]  z-10"
-        /> */}
+        />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+
 import Header from "./Header";
 import hero_img from "../assets/Home/hero_img.png";
 import arrow from "../assets/Home/arrow.png";
@@ -21,10 +21,18 @@ import Contact from "../Components/Contact";
 import Footer from "./Footer";
 import MobileHero from "./MobileHero";
 import ScrollMoon from "../Components/ScrollMoon";
+import React, { useEffect,useState } from "react";
 
 const Home = ({ toggletheme, theme }) => {
+  const [isEdge, setIsEdge] = useState(false);
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes("Edg")) {
+      setIsEdge(true);
+    }
+  });
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-hidden">
       <div className="block md:hidden">
         {/* <div className="bg-[#190F21] h-[1100px]">
           <Header toggletheme={toggletheme} theme={theme} />
@@ -33,16 +41,16 @@ const Home = ({ toggletheme, theme }) => {
         <MobileHero toggletheme={toggletheme} theme={theme} />
       </div>
       <div
-        className="hidden md:block bg-cover bg-center bg-[#190F21] bg-no-repeat relative  min-h-[145vh] md:min-h-[60vh] lg:min-h-[65vh] xl:min-h-[75vh] 2xl:min-h-[80vh] 3xl:min-h-screen   "
+        className={`hidden md:block bg-cover bg-center bg-[#190F21] bg-no-repeat relative  min-h-[145vh] md:min-h-[60vh] lg:min-h-[65vh] xl:min-h-[100vh] 2xl:min-h-[80vh] 3xl:min-h-screen ${isEdge?"2xl:h-[70vh]":"xl:min-h-[100vh]"}  `}
         style={{ backgroundImage: `url(${hero_img})` }}
       >
         <Header toggletheme={toggletheme} theme={theme} />
         <Hero theme={theme} />
-        {/* <img
+        <img
           src={header_moon}
           className="hidden md:block absolute xl:right-[30rem] lg:bottom-[-2rem] xl:bottom-[-5rem] xl:w-[10%] md:bottom-[-2rem] md:w-[10%] lg:right-[15rem] md:right-[7rem]"
-        /> */}
-        <ScrollMoon />
+        />
+        {/* <ScrollMoon /> */}
       </div>
       <div toggletheme={toggletheme} theme={theme}>
         <div className="hidden md:block">

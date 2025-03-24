@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const Layout = ({ children, toggletheme, theme }) => {
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App ${theme} overflow-x-hidden`}>
       <Header toggletheme={toggletheme} theme={theme} />
       <main>{children}</main>
       <Footer  toggletheme={toggletheme} theme={theme} />

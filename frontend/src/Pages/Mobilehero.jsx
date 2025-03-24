@@ -7,7 +7,7 @@ const MobileHero = ({ toggletheme, theme }) => {
   return (
     <div>
       <div className="bg-[#190F21] h-[1100px] relative mb-[17rem]">
-        <Header toggletheme={toggletheme} theme={theme} />
+        {/* <Header toggletheme={toggletheme} theme={theme} /> */}
         <Hero />
        <div className="">
        <Values />

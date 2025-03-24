@@ -37,11 +37,11 @@ const Process = ({ theme }) => {
             data-aos-delay="200"
           >
             <div className=" 2xl:pl-[4rem]  relative">
-              <img src={process} alt="process" className=" w-full z-0" />
-              {/* <img
+              <img src={process} alt="process" className=" w-full z-0 max-w-[600px]" />
+              <img
                 src={header_moon}
                 className="absolute 2xl:right-[-4rem] md:right-[-2rem] lg:top-[-3rem] md:top-[-1rem] 3xl:w-[30%] lg:w-[35%] md:w-[40%] z-100"
-              /> */}
+              />
             </div>
           </div>
           <div
@@ -72,7 +72,7 @@ const Process = ({ theme }) => {
                 {list.map((item, i) => (
                   <li className="flex gap-[2rem] mb-[2rem] " key={item.id}>
                     <p
-                      className="text-white md:w-20 md:h-8 2xl:w-14 xl:w-14 xl:h-10 lg:w-14 lg:h-8 sm:w-16 sm:h-8 rounded-full flex p-1 justify-center items-center text-2xl  md:text-xl sm:text-base font-semibold"
+                      className="text-white md:w-20 md:h-8  2xl:w-14 xl:w-14 xl:h-10 lg:w-14 lg:h-8 sm:w-16 sm:h-8 rounded-full flex p-1 justify-center items-center text-2xl  md:text-xl sm:text-base font-semibold"
                       style={{
                         background:
                           "linear-gradient(135deg, #FF297F 25%, #9E60C4 45%, #4B8FFF 80%)",
@@ -86,7 +86,7 @@ const Process = ({ theme }) => {
                           theme === "dark"
                             ? " text-[#5FC1FF]"
                             : "text-[#0444AC]"
-                        } font-semibold text-3xl  2xl:text-2xl 3xl:text-3xl xl:text-xl md:text-base  sm:text-base leading-relaxed`}
+                        } font-semibold text-3xl  2xl:text-2xl content-line-spacing 3xl:text-3xl xl:text-xl md:text-base  sm:text-base leading-relaxed`}
                       >
                         {item.name}{" "}
                         <span
@@ -179,13 +179,13 @@ const Process = ({ theme }) => {
           src={line}
           className="mt-[3rem] 2xl:mb-[4rem] lg:mt-[5rem] 3xl:mt-0 relative z-0"
         />
-        {/* <img
+        <img
           src={header_moon}
           className="absolute w-[15%] 2xl:w-[8%] right-[15rem] top-[-2rem] md:top-[-3rem] lg:top-[-4rem]  z-10"
 
 
           //left-[3rem] top-[-2rem] 3xl:right-[25rem] 3xl:top-[-5rem] md:left-[5rem] md:top-[-3rem]  xl:top-[-5rem] lg:top-[-4rem] 2xl:right-[10rem] 2xl:top-[-4rem]
-        /> */}
+        />
       </div>
     </div>
   );

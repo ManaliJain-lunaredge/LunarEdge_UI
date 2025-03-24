@@ -1,11 +1,23 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import line from "../assets/bar/line.png";
 import header_moon from "../assets/Home/header_moon.png";
 import { Link } from "react-router-dom";
 
 const Contact = ({ theme }) => {
+  const [isContact, setIsContact] = useState(false);
+   useEffect(() => {
+      const pathname = window.location.pathname;
+   
+      if (pathname === '/contact') {
+        setIsContact(true);
+        
+      } else if (pathname === '/') {
+        
+        setIsContact(false);
+      }
+    }, []);
   return (
-    <div>
+    <div className={`${isContact ? "pt-[10rem]":"p-0"}`}>
       <div className="2xl:px-[8rem] 2xl:py-[5rem] md:p-[3rem] p-[2rem] py-[5rem]">
         <div>
           <div className="lg:grid grid-cols-6  gap-[5rem]">
@@ -187,12 +199,12 @@ const Contact = ({ theme }) => {
       <div className="relative">
         <img
           src={line}
-          className="mt-[0rem] md:mt-[2rem] lg:mt-0 relative 2xl:mb-[3rem] 3xl:mb-0 z-0"
+          className="mt-[0rem] md:mt-[2rem] lg:mt-0 relative 2xl:mb-[6rem]  3xl:mb-[10rem] z-0"
         />
-        {/* <img
+        <img
           src={header_moon}
           className="absolute w-[10%] md:left-[25rem] left-[5rem] top-[-1rem] lg:top-[-4rem] md:top-[-2rem] z-10"
-        /> */}
+        />
       </div>
     </div>
   );

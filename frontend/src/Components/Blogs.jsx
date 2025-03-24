@@ -120,9 +120,9 @@ const Blogs = ({ theme }) => {
             <FaAngleRight className="text-4xl" />
           </div>
         </div>
-       <div data-aos="fade-up-left"
+       <div data-aos="zoom-out"
     data-aos-duration="500"
-    data-aos-delay="150">
+    data-aos-delay="200">
        <Slider {...settings} ref={sliderRef}>
           {list.map((item) => (
             <div key={item.id} className="mt-[3rem] mb-[2rem]">
@@ -157,10 +157,10 @@ const Blogs = ({ theme }) => {
       </div>
       <div className="relative">
         <img src={line} className="mt-[0rem] 2xl:mb-[3rem] relative z-0" />
-        {/* <img
+        <img
           src={header_moon}
           className="absolute md:w-[8%] w-[15%] top-[-2rem] right-[10rem] md:top-[-2rem] 2xl:top-[-4rem] lg:top-[-3rem] z-10"
-        /> */}
+        />
       </div>
     </div>
   );

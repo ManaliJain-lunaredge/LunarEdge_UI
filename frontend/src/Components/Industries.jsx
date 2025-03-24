@@ -10,7 +10,7 @@ import technology from "../assets/Technology/technology.png";
 import { FaAngleRight } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import line from "../assets/bar/line.png";
-
+import header_moon from "../assets/Home/header_moon.png";
 const Industries = ({ theme }) => {
   const sliderRef = useRef(null);
   const [isDarkMode, setIsDarkMode] = useState(false);

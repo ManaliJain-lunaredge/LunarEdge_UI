@@ -26,6 +26,9 @@ body {
 .custome-leading {
   line-height: 2 !important;
 }
+.content-line-spacing{
+  line-height: 1.5 !important;
+}
 .btn-hover:hover {
   background-color: #1c0d5c !important;
 } /* Light Mode */

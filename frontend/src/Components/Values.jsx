@@ -101,7 +101,7 @@ const Values = ({ theme }) => {
               </div>
 
               {/* Content Box */}
-              <div className="bg-white hover:bg-[#e8e8e8] cursor-pointer shadow-md rounded-md p-6 pt-16 text-center flex flex-col justify-around 3xl:min-h-[19rem] 2xl:min-h-[23rem]">
+              <div className="bg-white hover:bg-[#e8e8e8] cursor-pointer shadow-md rounded-md p-6 pt-16 text-center flex flex-col justify-around 3xl:min-h-[15rem] 2xl:min-h-[23rem]">
                 <h3 className="text-[#0444AC] text-center font-semibold text-3xl font-poppins ">
                   {item.name}
                 </h3>
@@ -133,7 +133,7 @@ const Values = ({ theme }) => {
                 <h3 className="text-[#0444AC] text-center font-semibold text-xl xl:text-3xl lg:text-2xl md:text-xl sm:text-base leading-relaxed font-poppins">
                   {item.name}
                 </h3>
-                <p className="text-[#08162F] text-center mt-[1rem]  text-base  xl:text-2xl lg:text-base md:text-base sm:text-sm  font-normal font-poppins flex justify-center items-center ">
+                <p className="text-[#08162F] text-center mt-[1rem]  text-base  xl:text-xl lg:text-base md:text-base sm:text-sm  font-normal font-poppins flex justify-center items-center ">
                   {item.description}
                 </p>
               </div>

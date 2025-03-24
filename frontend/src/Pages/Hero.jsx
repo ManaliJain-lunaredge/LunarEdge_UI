@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import arrow from "../assets/Home/arrow.png";
 import { Link } from "react-router-dom";
 import mobile_hero from "../assets/Hero/mobile_hero.png";
 import header_moon from "../assets/Home/header_moon.png";
 const Hero = () => {
+ 
   const list = [
     {
       id: 1,
@@ -18,6 +19,7 @@ const Hero = () => {
       name: "Precision and Passion",
     },
   ];
+
   return (
     <div>
       <div
@@ -26,7 +28,7 @@ const Hero = () => {
         data-aos-duration="500"
         data-aos-delay="200"
       >
-        <h3 class="md:text-left font-poppins text-center bg-clip-text text-transparent bg-gradient-to-r from-[#FF297F] from-[0%] to-[#4B8FFF] to-[38%] font-semibold 2xl:text-6xl text-4xl  2xl:pt-[17rem] mt-[0rem] leading-tight">
+        <h3 class="md:text-left font-poppins text-center bg-clip-text text-transparent bg-gradient-to-r from-[#FF297F] from-[0%] to-[#4B8FFF] to-[38%] font-semibold 2xl:text-6xl text-4xl  xl:pt-[17rem] mt-[0rem]  leading-tight">
           Smart Innovation
           <br /> Meets <span class="text-[#43ACF8]">INFINITY</span>
         </h3>
@@ -34,7 +36,7 @@ const Hero = () => {
           We Transform Innovative Ideas Into Reality
         </h4>
         <div>
-          <p className="text-white  2xl:text-2xl md:text-base text-xl mt-[3rem] lg:text-base xl:w-[33%] lg:w-[40%]  md:w-[38%]">
+          <p className="text-white custome-leading   2xl:text-2xl md:text-base text-xl mt-[3rem] lg:text-base xl:w-[33%] lg:w-[40%]  md:w-[38%]">
             Step into a world where innovation meets possibility. At LunarEdge,
             we craft IT solutions that transform your business dreams into
             digital reality. Experience the magic of technology thoughtfully
@@ -50,14 +52,13 @@ const Hero = () => {
             />
           </div>
           <div className="2xl:mt-[0.9rem] lg:mt-[0.6rem] md:mt-[0.3rem] group">
-  <Link
-    to="/contact"
-    className="text-white bg-gradient-to-l from-[#FF297F] to-[#4B8FFF] rounded-md cursor-pointer lg:text-base md:text-xs p-3 2xl:w-[15rem] w-[7rem] h-[3rem] 2xl:h-[3rem] transition-all duration-300 group-hover:from-[#4B8FFF] group-hover:to-[#4B8FFF]"
-  >
-    Book a Free Consultation
-  </Link>
-</div>
-
+            <Link
+              to="/contact"
+              className="text-white bg-gradient-to-l from-[#FF297F] to-[#4B8FFF] rounded-md cursor-pointer lg:text-base md:text-xs p-3 2xl:w-[15rem] w-[7rem] h-[3rem] 2xl:h-[3rem] transition-all duration-300 group-hover:from-[#4B8FFF] group-hover:to-[#4B8FFF]"
+            >
+              Book a Free Consultation
+            </Link>
+          </div>
         </div>
       </div>
       <div className="block md:hidden p-[1rem]">
@@ -94,32 +95,32 @@ const Hero = () => {
 
           {/* Button */}
           <div className="mt-1 w-full group">
-  <Link
-    to="/contact"
-    className="block text-white bg-gradient-to-l from-[#FF297F] to-[#4B8FFF] rounded-md cursor-pointer text-sm md:text-xs p-3 text-center transition-all duration-300 group-hover:from-[#4B8FFF] group-hover:to-[#4B8FFF]"
-  >
-    Book a Free Consultation
-  </Link>
-</div>
-
+            <Link
+              to="/contact"
+              className="block text-white bg-gradient-to-l from-[#FF297F] to-[#4B8FFF] rounded-md cursor-pointer text-sm md:text-xs p-3 text-center transition-all duration-300 group-hover:from-[#4B8FFF] group-hover:to-[#4B8FFF]"
+            >
+              Book a Free Consultation
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-4">
           <div className="col-span-3">
             <p className={` text-white pt-[2rem] w-[90%]`}>
-              step into a world where innovation meets possibility. At
+              Step into a world where innovation meets possibility. At
               LunarEdge, we craft IT solutions that transform your business
               dreams into digital reality. Experience the magic of technology
               thoughtfully designed for your success.{" "}
             </p>
           </div>
-          <div
-            className="col-span-1 flex justify-center flex-col items-center"
-            
-          >
-            <img src={header_moon} className="" data-aos="zoom-in"
-            data-aos-duration="500"
-            data-aos-delay="100"/>
+          <div className="col-span-1 flex justify-center flex-col items-center">
+            <img
+              src={header_moon}
+              className=""
+              data-aos="zoom-in"
+              data-aos-duration="500"
+              data-aos-delay="100"
+            />
           </div>
         </div>
       </div>

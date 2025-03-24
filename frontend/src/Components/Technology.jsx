@@ -91,11 +91,13 @@ const Technology = ({ theme }) => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-    
     >
-      <div className="2xl:px-[8rem] xl:px-[3rem] md:p-[3rem] p-[2rem] py-[5rem] relative"   data-aos="fade-left"
-              data-aos-duration="500"
-              data-aos-delay="150">
+      <div
+        className="2xl:px-[8rem] xl:px-[3rem] md:p-[3rem] p-[2rem] py-[5rem] relative"
+        data-aos="fade-left"
+        data-aos-duration="500"
+        data-aos-delay="150"
+      >
         <h4
           className={`${
             theme === "dark" ? " text-white" : "text-[#0444AC]"
@@ -128,30 +130,31 @@ const Technology = ({ theme }) => {
             <FaAngleRight className="2xl:text-4xl text-xl" />
           </div>
         </div>
-  <div data-aos="fade-right"
-              data-aos-duration="500"
-              data-aos-delay="150">
-  <Slider {...settings} ref={sliderRef}>
-          {list.map((item) => (
-            <div key={item.id} className="mt-[1.5rem] mb-[2rem] sm:pl-[1rem] ">
-              <div className="3xl:w-[10rem] 3xl:h-[10rem] 2xl:w-[8rem] 2xl:h-[8rem] md:w-[5rem] md:h-[5rem] w-[6rem] h-[6rem] p-[1rem]  rounded-full 2xl:p-[2rem] bg-[#e8e8e8]  border-2 border-white mx-auto ">
-                <img src={item.img} />
-              </div>
-              <div className="w-[0.1rem] h-[5rem] bg-[#e8e8e8] mx-auto"></div>
-              <div className="font-poppins  text-center  cursor-pointer">
-                <div className="text-center rounded-lg">
-                  <div className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] 3xl:w-[398px] 2xl:w-[300px]  lg:w-[100%] md:w-[95% ] w-[95%] text-center p-[1rem] text-white xl:text-4xl 2xl:text-2xl 3xl:text-4xl lg:text-2xl font-medium font-poppins rounded-t-md">
-                    {item.name}
-                  </div>
-                  <div className="bg-white bg-opacity-80 p-[1rem] rounded-b-md text-base sm:text-base 3xl:w-[398px] 2xl:w-[300px] lg:w-[100%] 3xl:h-[330px] lg:h-[240px] md:h-[350px] h-[300px] sm:w-[95%]  w-[95%] 3xl:text-2xl flex justify-center items-center">
-                    {item.description}
+        <div data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+          <Slider {...settings} ref={sliderRef}>
+            {list.map((item) => (
+              <div
+                key={item.id}
+                className="mt-[1.5rem] mb-[2rem] sm:pl-[1rem] "
+              >
+                <div className="3xl:w-[10rem] 3xl:h-[10rem] 2xl:w-[8rem] 2xl:h-[8rem] md:w-[5rem] md:h-[5rem] w-[6rem] h-[6rem] p-[1rem]  rounded-full 2xl:p-[2rem] bg-[#e8e8e8]  border-2 border-white mx-auto ">
+                  <img src={item.img} />
+                </div>
+                <div className="w-[0.1rem] h-[5rem] bg-[#e8e8e8] mx-auto"></div>
+                <div className="font-poppins  text-center  cursor-pointer">
+                  <div className="text-center rounded-lg">
+                    <div className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] 3xl:w-[398px] 2xl:w-[300px]  lg:w-[100%] md:w-[95% ] w-[95%] text-center p-[1rem] text-white xl:text-4xl 2xl:text-2xl 3xl:text-4xl lg:text-2xl font-medium font-poppins rounded-t-md">
+                      {item.name}
+                    </div>
+                    <div className="bg-white bg-opacity-80 p-[1rem] rounded-b-md text-base sm:text-base 3xl:w-[398px] 2xl:w-[300px] lg:w-[100%] 3xl:h-[330px] lg:h-[240px] md:h-[350px] h-[300px] sm:w-[95%]  w-[95%] 3xl:text-2xl flex justify-center items-center">
+                      {item.description}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-  </div>
+            ))}
+          </Slider>
+        </div>
       </div>
       <div className="relative">
         <img src={line} className="mt-[0rem] relative z-0" />

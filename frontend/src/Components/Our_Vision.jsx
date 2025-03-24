@@ -49,7 +49,7 @@ const Our_Vision = ({ theme }) => {
           className="md:flex 2xl:gap-[3rem] xl:gap-[1rem] mt-[3rem] "
           data-aos="zoom-in"
           data-aos-duration="800"
-          data-aos-delay="800"
+          data-aos-delay="300"
         >
           {list.map((item) => (
             <li
@@ -58,7 +58,7 @@ const Our_Vision = ({ theme }) => {
                 theme === "dark"
                   ? " bg-[#E8E8E8] hover:bg-white cursor-pointer"
                   : "bg-white hover:bg-[#e8e8e8] cursor-pointer"
-              }   rounded-lg p-[2rem] w-[70%]  flex flex-col justify-around`}
+              }   rounded-lg p-[2rem]  flex flex-col justify-around`}
             >
               <h3 className="font-bold text-3xl xl:text-3xl lg:text-2xl md:text-xl sm:text-base leading-relaxed text-center">
                 {item.name}
@@ -113,10 +113,10 @@ const Our_Vision = ({ theme }) => {
       {/* moon view */}
       <div className="relative">
         <img src={line} className="md:mt-[8rem] mt-[3rem] relative z-0" />
-        {/* <img
+        <img
           src={header_moon}
           className="absolute 3xl:w-[8%] w-[15%] md:w-[15%] 2xl:w-[10%] right-[5rem]  md:top-[-5rem] top-[-2rem] z-10"
-        /> */}
+        />
       </div>
     </div>
   );
