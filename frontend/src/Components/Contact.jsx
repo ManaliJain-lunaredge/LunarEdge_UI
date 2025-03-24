@@ -199,7 +199,7 @@ const Contact = ({ theme }) => {
       <div className="relative">
         <img
           src={line}
-          className="mt-[0rem] md:mt-[2rem] lg:mt-0 relative 2xl:mb-[6rem]  3xl:mb-[10rem] z-0"
+          className="mt-[0rem] md:mt-[2rem] lg:mt-0 relative xl:mb-[6rem]  3xl:mb-[10rem] z-0"
         />
         <img
           src={header_moon}

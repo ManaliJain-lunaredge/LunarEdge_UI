@@ -108,7 +108,7 @@ const Technology = ({ theme }) => {
         <h3 className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] font-poppins text-transparent  bg-clip-text inline-block font-semibold 3xl:text-6xl 2xl:text-4xl  xl:text-4xl lg:text-3xl sm:text-2xl lg:leading-tight text-3xl xl:leading-tight md:text-2xl  leading-tight mt-0 pb-[2rem]">
           The Technologies We Excel At
         </h3>
-        <div className="md:flex hidden 2xl:gap-[2rem] gap-[1rem] absolute 2xl:top-[7rem] top-[3rem]  3xl:right-[5rem] 2xl:right-[10rem] right-[3rem]">
+        <div className="md:flex hidden 2xl:gap-[2rem] gap-[1rem] absolute xl:top-[7rem]  top-[3rem]  3xl:right-[5rem] 2xl:right-[10rem] right-[3rem]">
           <div
             className={`${
               theme === "dark"

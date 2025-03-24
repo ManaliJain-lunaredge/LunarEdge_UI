@@ -7,6 +7,7 @@ import header_moon from "../assets/Home/header_moon.png";
 import { Link } from "react-router-dom";
 const Aboutus = ({ theme }) => {
   const [isAbout, setIsAbout] = useState(false);
+  const [isEdge, setIsEdge] = useState(false);
   const list = [
     {
       id: 1,
@@ -37,6 +38,10 @@ const Aboutus = ({ theme }) => {
       
       setIsAbout(false);
     }
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes("Edg")) {
+      setIsEdge(true);
+    }
   }, []);
 
   return (
@@ -55,7 +60,7 @@ const Aboutus = ({ theme }) => {
           />
           <img
             src={header_moon}
-            className="absolute right-[-2rem] bottom-[-1%]  xl:bottom-[32%] 3xl:bottom-[-1%]  md:w-[40%] 2xl:bottom-[0%] 2xl:right-[-8%] xl:right-[-13%] 3xl:right-[-10%] lg:right-[-8%] lg:bottom-[20%] md:bottom-[50%] sm:bottom-[45%] md:right-[-1rem] sm:right-[-1rem] w-[30%]"
+            className={`absolute right-[-2rem] bottom-[-1%]  xl:bottom-[32%] 3xl:bottom-[-1%]  md:w-[40%] 2xl:bottom-[0%] 2xl:right-[-8%] xl:right-[-13%] 3xl:right-[-10%] lg:right-[-8%] lg:bottom-[20%] md:bottom-[50%] sm:bottom-[45%] md:right-[-1rem] sm:right-[-1rem] w-[30%] ${isEdge?"xl:bottom-0":""}`}
           />
         </div>
         <div className="col-span-3 w-[90%]"  data-aos="fade-down-left"
@@ -102,7 +107,7 @@ const Aboutus = ({ theme }) => {
                 </li>
               ))}
             </ul>
-            <div className="bg-[#0444AC] text-white rounded-md p-[1.5rem] text-center flex  max-w-[350px] w-full hover:bg-[#FF297F] mt-[1rem] cursor-pointer transition-all duration-300">
+            <div className={`bg-[#0444AC] text-white rounded-md p-[1.5rem] text-center flex  3xl:max-w-[350px] md:max-w-[250px] w-full hover:bg-[#FF297F] mt-[1rem] cursor-pointer transition-all duration-300 ${isEdge ? "xl:max-w-[250px]":"xl:max-w-[250px]"}`}>
               {/* w-[70%] xl:w-[40%] 3xl:w-[28%] 2xl:w-[35%]  lg:w-[50%] md:w-[55%] sm:w-[60%] */}
               <Link to="/aboutus" className="lg:text-lg xl:text-base 3xl:text-2xl text-sm inline">
                 Know more About us{" "}

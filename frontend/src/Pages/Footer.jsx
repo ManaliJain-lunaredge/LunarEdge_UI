@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Footer = ({ theme }) => {
   return (
     <div>
-      <div className="2xl:px-[8rem] p-[2rem] md:pb-[5rem] mt-[2rem] md:mt-0">
+      <div className="xl:px-[8rem] p-[2rem] md:pb-[5rem] mt-[2rem] md:mt-0">
         <div className="lg:flex justify-between">
           <div className="">
             <Link to="/">
@@ -18,7 +18,7 @@ const Footer = ({ theme }) => {
             </Link>
             <h3 className={`${
                           theme === "dark" ? " text-[#5FC1FF]" : "text-[#0444AC]"
-                        } mt-[3rem] sm:text-xl text-xl 2xl:text-3xl font-semibold`}>
+                        } mt-[3rem] sm:text-xl text-xl xl:text-3xl font-semibold`}>
               Follow Us On
             </h3>
             <div className={`${
@@ -75,7 +75,7 @@ const Footer = ({ theme }) => {
                 <p
                   className={`${
                     theme === "dark" ? " text-white" : "text-black"
-                  } font-semibold  xl:text-2xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}
+                  } font-semibold  xl:text-xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}
                 >
                   Call Us:{" "}
                   <span className="font-normal">
@@ -86,7 +86,7 @@ const Footer = ({ theme }) => {
                 </p>
                 <p  className={`${
                     theme === "dark" ? " text-white" : "text-black"
-                  } font-semibold  xl:text-2xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
+                  } font-semibold  xl:text-xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
                   Email us:{" "}
                   <a to="mailto:info@lunaredgeit.com" className="font-normal">
                     info@lunaredgeit.com
@@ -94,7 +94,7 @@ const Footer = ({ theme }) => {
                 </p>
                 <p  className={`${
                     theme === "dark" ? " text-white" : "text-black"
-                  } font-semibold  xl:text-2xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
+                  } font-semibold  xl:text-xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
                   Office:{" "}
                   <span className="font-normal ">
                     203, Manglam,
@@ -114,7 +114,7 @@ const Footer = ({ theme }) => {
               </h3>
               <ul className={`${
                     theme === "dark" ? " text-white" : "text-black"
-                  } xl:text-2xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
+                  } xl:text-xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
                 <li>
                   <Link to="aboutus" className="hover:text-[#FF297F] ">
                     About Us
@@ -155,7 +155,7 @@ const Footer = ({ theme }) => {
               </h3>
               <ul className={`${
                     theme === "dark" ? " text-white" : "text-black"
-                  } xl:text-2xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
+                  } xl:text-xl 2xl:text-xl 3xl:text-2xl text-base custome-leading`}>
                 <li>
                   <Link to="aboutus" className="hover:text-[#FF297F]">
                     About Team

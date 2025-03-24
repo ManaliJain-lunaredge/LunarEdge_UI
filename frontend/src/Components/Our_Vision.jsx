@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img1 from "../assets/Our_Vision/img1.png";
 import img2 from "../assets/Our_Vision/img2.png";
 import img3 from "../assets/Our_Vision/img3.png";
@@ -6,6 +6,7 @@ import line from "../assets/bar/line.png";
 import header_moon from "../assets/Home/header_moon.png";
 
 const Our_Vision = ({ theme }) => {
+  const [isEdge, setIsEdge] = useState(false);
   const list = [
     {
       id: 1,
@@ -29,10 +30,18 @@ const Our_Vision = ({ theme }) => {
         "By blending groundbreaking ideas with an unwavering commitment to quality, we build solutions that endure.",
     },
   ];
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes("Edg")) {
+      setIsEdge(true);
+    }
+  });
   return (
-    <div className="pt-[2rem] pb-[4rem] w-full h-full">
+    <div className={` pt-[2rem] pb-[4rem] w-full h-full`}>
       {/* desktop view */}
-      <div className="px-[7rem] mt-[3rem] 2xl:block hidden">
+      <div
+        className={` px-[7rem] mt-[3rem] 2xl:block hidden`}
+      >
         <h4 className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] font-poppins text-transparent  bg-clip-text inline-block font-semibold 2xl:text-6xl  xl:text-4xl lg:text-4xl sm:text-2xl lg:leading-tight xl:leading-tight md:text-3xl  leading-tight mt-0 pb-[2rem]">
           A Vision for the Future
         </h4>
@@ -72,7 +81,9 @@ const Our_Vision = ({ theme }) => {
         </ul>
       </div>
       {/* mobile View */}
-      <div className="p-[2rem] mt-[0rem] 2xl:hidden ">
+      <div className={`${
+          isEdge ? "px-[3rem]" : ""
+        } p-[2rem] mt-[0rem] 2xl:hidden `}>
         <h4 className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] font-poppins text-transparent  bg-clip-text inline-block font-semibold 3xl:text-6xl 2xl:text-5xl  xl:text-5xl lg:text-3xl sm:text-2xl lg:leading-tight xl:leading-tight md:text-2xl text-3xl  leading-tight mt-0 pb-[2rem]">
           A Vision for the Future
         </h4>
@@ -85,9 +96,12 @@ const Our_Vision = ({ theme }) => {
           To lead globally in IT services through innovation, customer focus,
           and Inflexible quality.
         </h3>
-        <ul className="lg:flex 2xl:gap-[3rem] gap-[1rem]   lg:mt-[2rem] " data-aos="zoom-in"
+        <ul
+          className="lg:flex 2xl:gap-[3rem] gap-[1rem]   lg:mt-[2rem] "
+          data-aos="zoom-in"
           data-aos-duration="800"
-          data-aos-delay="800">
+          data-aos-delay="800"
+        >
           {list.map((item) => (
             <li
               key={item.id}
@@ -115,7 +129,7 @@ const Our_Vision = ({ theme }) => {
         <img src={line} className="md:mt-[8rem] mt-[3rem] relative z-0" />
         <img
           src={header_moon}
-          className="absolute 3xl:w-[8%] w-[15%] md:w-[15%] 2xl:w-[10%] right-[5rem]  md:top-[-5rem] top-[-2rem] z-10"
+          className="absolute 3xl:w-[8%] w-[15%] md:w-[12%] 2xl:w-[10%] right-[5rem]  md:top-[-5rem] top-[-2rem] z-10"
         />
       </div>
     </div>

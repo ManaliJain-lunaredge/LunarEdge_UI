@@ -129,7 +129,7 @@ const Blogs = ({ theme }) => {
               <div className="font-poppins  ">
                 <div className={`${
                 theme === "dark" ? " bg-[#E8E8E8] hover:bg-white cursor-pointer" : "bg-white hover:bg-[#e8e8e8] cursor-pointer "
-              } 3xl:w-[500px] 2xl:w-[400px] 2xl:h-[550px] 3xl:h-[630px] md:w-[96%] w-[98%] lg:h-[450px]  md:h-[550px] h-[470px] rounded-lg flex flex-col `}>
+              } 3xl:w-[500px] 2xl:w-[400px] xl:h-[550px] 3xl:h-[630px] md:w-[96%] w-[98%] lg:h-[450px]  md:h-[550px] h-[470px] rounded-lg flex flex-col `}>
                   <img src={item.img} className="p-[1rem]" />
                   <div className="flex justify-between  mt-[1rem] p-[1rem]">
                     <div className="  text-[#4B8FFE] 2xl:text-2xl font-semibold font-poppins ">
@@ -139,7 +139,7 @@ const Blogs = ({ theme }) => {
                       <p className="font-bold">{item.by}</p>
                     </div>
                   </div>
-                  <div className=" p-[1rem]  xl:text-2xl 2xl:text-xl 3xl:text-2xl lg:text-base text-base  ">
+                  <div className=" p-[1rem]  xl:text-xl 2xl:text-xl 3xl:text-2xl lg:text-base text-base  ">
                     {item.description}
                     <a
                       href=""

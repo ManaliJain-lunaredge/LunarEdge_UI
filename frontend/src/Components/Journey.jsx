@@ -152,7 +152,7 @@ const Journey = ({ theme }) => {
       </div>
 
       {/* for desktop */}
-      <img src={line} className="mt-[0rem] hidden" />
+      <img src={line} className="xl:mt-[3rem] hidden xl:block" />
 
       <div className="relative xl:hidden my-[1rem]">
         <img src={line} className="mt-[0rem] relative z-0" />

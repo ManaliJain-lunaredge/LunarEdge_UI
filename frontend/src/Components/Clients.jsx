@@ -142,7 +142,7 @@ const Clients = ({ theme }) => {
                       theme === "dark"
                         ? " bg-[#E8E8E8] dark:hover:bg-white dark:cursor-pointer"
                         : "bg-white hover:bg-[#e8e8e8] cursor-pointer"
-                    }  3xl:w-[500px] 2xl:w-[400px] 2xl:h-[500px] 3xl:h-[600px] w-[98%] xl:w-[90%] xl:h-[500px]  lg:h-[400px] h-[450px] rounded-lg flex flex-col justify-center`}
+                    }  3xl:w-[500px] 2xl:w-[400px] 2xl:h-[500px] 3xl:h-[600px] w-[98%] xl:w-[90%] xl:h-[450px]  lg:h-[400px] h-[450px] rounded-lg flex flex-col justify-center`}
                   >
                     <img
                       src={item.img}
@@ -157,7 +157,7 @@ const Clients = ({ theme }) => {
                         <p className="font-bold">{item.rate}</p>
                       </div>
                     </div>
-                    <div className=" 2xl:px-[2rem] p-[1rem]   text-base  xl:text-2xl 2xl:text-xl 3xl:text-2xl lg:text-base md:text-base sm:text-sm ">
+                    <div className=" 2xl:px-[2rem] p-[1rem]   text-base  xl:text-xl 2xl:text-xl 3xl:text-2xl lg:text-base md:text-base sm:text-sm ">
                       "{item.description}"
                     </div>{" "}
                   </div>

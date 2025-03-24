@@ -134,7 +134,7 @@ const Industries = ({ theme }) => {
                 key={item.id}
                 className="sm:mt-[3rem] mt-[6rem] mb-[2rem] "
               >
-                <div className="3xl:w-[10rem] 3xl:h-[10rem] 2xl:w-[8rem] 2xl:h-[8rem] lg:w-[5rem] lg:h-[5rem] md:w-[5rem] md:h-[5rem] md:p-[1rem]  w-[5rem] h-[5rem] p-[1rem] flex justify-center rounded-full text-center xl:p-[2rem] lg:p-[1rem]  bg-[#e8e8e8]  border-2 border-white  mx-auto">
+                <div className="3xl:w-[10rem] 3xl:h-[10rem] xl:w-[8rem] xl:h-[8rem] lg:w-[5rem] lg:h-[5rem] md:w-[5rem] md:h-[5rem] md:p-[1rem]  w-[5rem] h-[5rem] p-[1rem] flex justify-center rounded-full text-center xl:p-[2rem] lg:p-[1rem]  bg-[#e8e8e8]  border-2 border-white  mx-auto">
                   <img src={item.img} />
                 </div>
                 <div className="w-[0.1rem] h-[5rem] bg-[#e8e8e8] mx-auto"></div>
@@ -143,7 +143,7 @@ const Industries = ({ theme }) => {
                     <div className="bg-gradient-to-r from-[#FF297F] to-[#4B8FFF] 3xl:w-[398px] 2xl:w-[300px] lg:w-[95%] md:w-[90%] w-[95%] sm:w-[98%] text-center p-[1rem] text-white xl:text-4xl text-3xl lg:text-2xl 2xl:text-2xl md:text-xl sm:text-2xl  font-medium font-poppins rounded-t-md">
                       {item.name}
                     </div>
-                    <div className="bg-white bg-opacity-80 p-[1rem] rounded-b-md   3xl:w-[398px] 2xl:w-[300px]  w-[95%] h-[300px]  sm:w-[98%] md:w-[90%] lg:w-[95%] 3xl:h-[400px] 2xl:h-[300px] xl:h-[400px] lg:h-[330px] md:h-[350px]   xl:text-2xl 2xl:text-xl 3xl:text-2xl lg:text-base md:text-base sm:text-base text-base  flex justify-center items-center">
+                    <div className="bg-white bg-opacity-80 p-[1rem] rounded-b-md   3xl:w-[398px] 2xl:w-[300px]  w-[95%] h-[300px]  sm:w-[98%] md:w-[90%] lg:w-[95%] 3xl:h-[400px] 2xl:h-[300px] xl:h-[350px] lg:h-[330px] md:h-[350px]   xl:text-xl 2xl:text-xl 3xl:text-2xl lg:text-base md:text-base sm:text-base text-base  flex justify-center items-center">
                       {item.description}
                     </div>
                   </div>

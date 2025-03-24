@@ -181,7 +181,7 @@ const Process = ({ theme }) => {
         />
         <img
           src={header_moon}
-          className="absolute w-[15%] 2xl:w-[8%] right-[15rem] top-[-2rem] md:top-[-3rem] lg:top-[-4rem]  z-10"
+          className="absolute w-[15%] xl:w-[8%] right-[15rem] top-[-2rem] md:top-[-3rem] lg:top-[-4rem]  z-10"
 
 
           //left-[3rem] top-[-2rem] 3xl:right-[25rem] 3xl:top-[-5rem] md:left-[5rem] md:top-[-3rem]  xl:top-[-5rem] lg:top-[-4rem] 2xl:right-[10rem] 2xl:top-[-4rem]

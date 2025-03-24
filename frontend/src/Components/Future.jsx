@@ -1,11 +1,13 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import future from "../assets/Future/future.png";
 import arrow from "../assets/Home/arrow.png";
 import { FaChevronRight } from "react-icons/fa";
 import line from "../assets/bar/line.png";
 import header_moon from "../assets/Home/header_moon.png";
 import { Link } from "react-router-dom";
+import { use } from "react";
 const Future = ({ theme }) => {
+  const [isEdge, setIsEdge] = useState(false);
   const list = [
     {
       id: 1,
@@ -26,6 +28,12 @@ const Future = ({ theme }) => {
         "At LunarEdge, we provide mentorship, leadership opportunities,  and a clear roadmap for achieving your professional goals.",
     },
   ];
+  useEffect(()=>{
+    const userAgent = navigator.userAgent;
+    if (userAgent.includes("Edg")) {
+      setIsEdge(true);
+    }
+  })
   return (
     <div>
       {/* desktop view */}
@@ -94,7 +102,7 @@ const Future = ({ theme }) => {
           data-aos-delay="200"
         >
           <div className=" ">
-            <img src={future} alt="future" className="w-full max-w-[600px] object-cover " />
+            <img src={future} alt="future" className={`${isEdge ? "w-[470px]":""} w-full max-w-[600px] object-cover `} />
           </div>
         </div>
       </div>
@@ -159,7 +167,7 @@ const Future = ({ theme }) => {
         />
         <img
           src={header_moon}
-          className="absolute lg:w-[14%] w-[25%] 2xl:left-[25rem] md:w-[15%] lg:top-[-6rem] lg:left-[5rem] md:top-[-3rem] md:left-[5rem] left-[2rem] top-[-3rem] 3xl:top-[-8rem] 2xl:top-[-6rem]  z-10"
+          className="absolute lg:w-[14%] xl:w-[10%] w-[25%] 2xl:left-[25rem] md:w-[15%] lg:top-[-6rem] lg:left-[5rem] md:top-[-3rem] md:left-[5rem] left-[2rem] top-[-3rem] 3xl:top-[-8rem] 2xl:top-[-6rem]  z-10"
         />
       </div>
     </div>
